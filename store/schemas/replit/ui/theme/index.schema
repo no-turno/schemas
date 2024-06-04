@@ -1,0 +1,87 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+		"codeSyntaxTheme": {
+			"type": "object",
+			"properties": {
+				"variableNames": {
+					"type": "string",
+					"format": "color"
+				},
+				"variableDefinitions": {
+					"type": "string",
+					"format": "color"
+				},
+				"functionReferences": {
+					"type": "string",
+					"format": "color"
+				},
+				"functionDefinitions": {
+					"type": "string",
+					"format": "color"
+				},
+				"keywords": {
+					"type": "string",
+					"format": "color"
+				},
+				"propertyNames": {
+					"type": "string",
+					"format": "color"
+				},
+				"propertyDefinitions": {
+					"type": "string",
+					"format": "color"
+				},
+				"functionProperties": {
+					"type": "string",
+					"format": "color"
+				},
+				"tagNames": {
+					"type": "string",
+					"format": "color"
+				},
+				"typeNames": {
+					"type": "string",
+					"format": "color"
+				}
+			},
+			"additionalProperties": false
+		},
+		"globalTheme": {
+			"type": "object",
+			"properties": {
+				"background": {
+					"type": "string",
+					"format": "color"
+				},
+				"outline": {
+					"type": "string",
+					"format": "color"
+				},
+				"foreground": {
+					"type": "string",
+					"format": "color"
+				},
+				"primary": {
+					"type": "string",
+					"format": "color"
+				},
+				"positive": {
+					"type": "string",
+					"format": "color"
+				},
+				"negative": {
+					"type": "string",
+					"format": "color"
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"required": [
+		"codeSyntaxTheme",
+		"globalTheme"
+	],
+	"additionalProperties": false
+}

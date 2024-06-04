@@ -1,0 +1,44 @@
+run = "cowsay Configure me!"
+entrypoint = "README.md"
+
+[nix]
+channel = "unstable"
+
+[env]
+XDG_CONFIG_HOME="/home/runner/.config"
+XDG_CACHE_HOME="/home/runner/.cache"
+npm_config_prefix="/home/runner/.config/.npm"
+BUN_INSTALL="/home/runner/.config/.bun"
+PATH="/home/runner/.config/.bun/bin:/home/runner/$REPL_SLUG/.config/.bin:/home/runner/$REPL_SLUG/node_modules/.bin"
+
+[languages]
+[languages.javascript]
+pattern = "**/{*.js,*.jsx,*.ts,*.tsx,*.mjs,*.mts,*.cjs,*.cts}"
+[languages.javascript.languageServer]
+start = "typescript-language-server --stdio"
+
+
+[packager]
+afterInstall = "echo 'package installed'"
+language = "bun"
+[packager.features]
+packageSearch = true
+guessImports = true
+enabledForHosting = true
+
+[deployment]
+build = "bun run build"
+run = "bun run start"
+ignorePorts = false
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[objectStorage]
+defaultBucketID = "replit-objstore-e2643151-8b8a-4c12-97a4-e8a8e106296e"
+
+[auth]
+pageEnabled = false
+buttonEnabled = false
+

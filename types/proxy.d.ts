@@ -1,0 +1,1 @@
+export type ProxyKey = '/home/runner/schemas/store/schemas/replit/config/index.schema'|'/home/runner/schemas/store/schemas/replit/ui/theme/index.schema'
